@@ -1,3 +1,4 @@
 function getData(d) {
-    Console.log(d);
+    console.log(d);
 }
+
