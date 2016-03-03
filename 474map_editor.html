@@ -4,8 +4,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Unity Web Player | 474_platformer</title>
 		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<script src="statistics.js"> </script>
 		<script type="text/javascript">
 		<!--
 		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
@@ -115,10 +113,36 @@
 			height: 360px;
 			width: 640px;
 		}
+		.chart {
+			top: 400;
+			left: 50;
+			position: absolute;
+			
+		}
+
+		rect{
+			fill: steelblue;
+		}
+
+		.axis path, 
+		.axis line {
+			fill: none;
+			stroke: white;
+			shape-rendering: crispEdges;
+		}
+
+		.axis text {
+			font-family: sans-serif;
+			font-size: 11px;
+			fill: white;
+		}
+
 		-->
 		</style>
 	</head>
 	<body>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="statistics.js"></script>
 		<p class="header"><span>Unity Web Player | </span>474_platformer</p>
 		<div class="content">
 			<div id="unityPlayer">
@@ -130,5 +154,6 @@
 			</div>
 		</div>
 		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+		<div id="chart"></div>
 	</body>
 </html>
