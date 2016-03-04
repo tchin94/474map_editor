@@ -10,34 +10,36 @@ function getData(data) {
         .range([height - padding, padding]);
     
     var xScale = d3.scale.linear()
-        .domain([0, d3.max(data.length)])
+        .domain([0, data.length])
         .range([padding, width - padding * 2]);
 
     var yAxis = d3.svg.axis()
-                    .scale(yScale)
-                    .orient("left");
+        .scale(yScale)
+        .orient("left");
+                 
     var xAxis = d3.svg.axis()
-                    .scale(xScale)
-                    .orient("bottom");
+        .scale(xScale)
+        .orient("bottom");
+
 
     var svg = d3.select("#chart")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height);
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom);
 
     svg.selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
         .attr("x", function(d, i) {
-            return i * (width / data.length) + padding;
+            return xScale(i);
         })
         .attr("y", function(d) {
-            return yScale(d) - padding;
+            return yScale(d);
         })
-        .attr("width", (width / data.length  - barPadding))
+        .attr("width", (((width - 2 * padding) / data.length)  - barPadding))
         .attr("height", function(d) { 
-            return height - yScale(d);
+            return (height - padding) - yScale(d);
         });
 
     svg.append("g")
@@ -46,11 +48,8 @@ function getData(data) {
         .call(yAxis);
 
     svg.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(0," + (height - padding) + ")")
-                .call(xAxis);
-    
-
- 
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + (height - padding) + ")")
+        .call(xAxis);
 }
 
