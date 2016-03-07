@@ -3,6 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Unity Web Player | 474_platformer</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 		<script type="text/javascript">
 		<!--
@@ -143,6 +145,70 @@
 	<body>
 		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 		<script src="statistics.js"></script>
+		<div id="cover"></div>
+		<div class="container">
+		<h1>1.1 Introduction</h1>
+			<p>
+				With the recent release of Super Mario Maker, average Joes from around the world are trying their hand at
+				level design. Unfortunately, average Joes make below average maps. Our goal is to help you improve your
+				level design through three steps: an introduction of level design best practices, a simple map maker,
+				and then data visualizations that will measure certain statistics about playthroughs on your map.
+			</p>
+		</div>
+
+		<div class="container">
+			<h1>2.1 Rewarding Players</h1>
+			<p>
+				Rewards are one of a game developer's strongest tools. The developers of Super Mario consistently used
+				coins as a collectible reward, and even used them to guide players through unknown areas. Know that
+				players will always chase the path with the most coins, and that this can always be used to your
+				advantage.
+			</p>
+			<figure>
+				<img src="img/rewardsconcept.PNG" alt="self teaching">
+				<figcaption>Use coins to both reward and nudge the player in the right direction.</figcaption>
+			</figure>
+		</div>
+
+		<div class="container">
+			<h1>2.2 The Self-Teaching Game</h1>
+			<p>
+				Everyone has played that game that is much too difficult at the beginning. Everyone has also played that
+				game that has an instruction manual thicker than Donald Trump. Avoid both by starting with easier levels that
+				transition to complexity. Allow them to experiment with running speed, jump height, and other skills that
+				you can then incorporate into your later obstacles. This will allow your players to tackle challenges with
+				eagerness and confidence, instead of feeling helpless and frustrated.
+			</p>
+			<figure>
+				<img src="img/teachingconcept.PNG" alt="self teaching">
+				<figcaption>Good coin and block placement suggests to the player that there is a wall-jump mechanic.</figcaption>
+			</figure>
+		</div>
+
+		<div class="container">
+			<h1>2.3 Safe and Danger Zones</h1>
+			<p>
+				The final concept of this tutorial is more of an extension of the previous concept. The famed "Super Mario
+				World 1 Level 1" was very careful intersperse "safe zones", or areas with no immediate danger, with "danger
+				zones", or areas that have a harmful enemy or obstacle. We suggest presenting your players with a harmless
+				obstacle where they can complete the basics, before adding hazards that add another layer to the game.
+				While we recognize the appeal for a lengthy and difficult course for gamers seeking a punishing challenge,
+				this is no way to welcome a casual player.
+			</p>
+			<figure>
+				<img src="img/easyconcept.PNG" alt="easy level">
+				<figcaption>This level allows the player to practice necessary skills before encouraging them
+					to traverse hazards.</figcaption>
+			</figure>
+			<br>
+			<figure>
+				<img src="img/difficultconcept.PNG" alt="difficult level">
+				<figcaption>Although still very doable, this level is much too long and dangerous for first-time players.</figcaption>
+			</figure>
+		</div>
+
+		<h1>3.1 Map Editor</h1>
+		<br>
 		<p class="header"><span>Unity Web Player | </span>474_platformer</p>
 		<div class="content">
 			<div id="unityPlayer">
@@ -154,6 +220,7 @@
 			</div>
 		</div>
 		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+		<h1>4.1 Level Data Visualizations</h1>
 		<div id="chart"></div>
 	</body>
 </html>
