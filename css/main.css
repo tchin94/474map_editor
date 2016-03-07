@@ -1,0 +1,5 @@
+#cover {
+    background-image: url("../img/mariocover-01.png");
+    background-size: cover;
+    height: 945px;
+}
