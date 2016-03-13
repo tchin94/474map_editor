@@ -3,3 +3,14 @@
     background-size: cover;
     height: 700px;
 }
+
+.container {
+    text-align: center;
+    padding: 2em;
+}
+
+.desc {
+    width: 60%;
+    margin: auto;
+    padding: 1em;
+}
