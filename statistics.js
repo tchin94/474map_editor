@@ -1,12 +1,14 @@
-function getData(data) {
-    var margin = {top: 40, right: 20, bottom: 30, left: 40},
+ var margin = {top: 40, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 510 - margin.top - margin.bottom;
     var barPadding = 1;
     var padding = 30;
 
+function getData(data) {
+    $('#chart').empty();
+
     var yScale = d3.scale.linear()
-        .domain([0, d3.max(data)])
+        .domain([0, d3.max(data) *1.25])
         .range([height - padding, padding]);
     
     var xScale = d3.scale.linear()
@@ -51,5 +53,25 @@ function getData(data) {
         .attr("class", "axis")
         .attr("transform", "translate(0," + (height - padding) + ")")
         .call(xAxis);
+
+    svg.append("text")
+        .attr("class", "label")
+        .attr("text-anchor", "end")
+        .attr("x", 50)
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .text("time (sec)");
+
+    svg.append("text")
+        .attr("class", "label")
+        .attr("text-anchor", "end")
+        .attr("x", 900)
+        .attr("y", 430)
+        .attr("dy", ".75em")
+        .text("location (from left)"); 
+}
+
+function mapError(msg) {
+    alert(msg);
 }
 
