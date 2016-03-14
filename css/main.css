@@ -6,11 +6,16 @@
 
 .container {
     text-align: center;
-    padding: 2em;
+    padding-bottom: 2em;
 }
 
 .desc {
     width: 60%;
     margin: auto;
     padding: 1em;
+}
+
+img {
+    width: 700px;
+    height: 400px;
 }
