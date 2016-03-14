@@ -59,7 +59,10 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "474map_editor.unity3d");
+				$( "#clickme" ).click(function() {    
+					u.initPlugin(jQuery("#unityPlayer")[0], "474map_editor.unity3d");
+					$("#clickme").remove();
+				});
 			});
 		-->
 		</script>
@@ -121,7 +124,14 @@
 			position: absolute;
 			
 		}
-
+		#clickme {
+			font-size: 14pt;
+			background-color: white;
+			color: black;
+		}
+		#clickme:hover {
+			cursor: pointer;
+		}
 		rect{
 			fill: steelblue;
 		}
@@ -215,6 +225,7 @@
 		</p>
 		<p class="header"><span>Unity Web Player | </span>474_platformer</p>
 		<div class="content">
+			<div id="clickme">Click here to start!</div>
 			<div id="unityPlayer">
 				<div class="missing">
 					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
